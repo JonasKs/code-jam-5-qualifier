@@ -47,6 +47,10 @@ def generate_password(
 def ensure_setting(password: str, capitalized: bool = False, symbol: bool = False) -> str:
     """
     Takes a password and ensures it has an upper case letter or symbol, depending on the settings
+    :param password: Already generated password
+    :param capitalized: Whether password must contain capitalized letters or not
+    :param symbol: Whether the password must contain a symbol or not
+    return: password in str
     """
     logging.info('Got password: %s.', password)
     found = {
